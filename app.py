@@ -8,7 +8,7 @@ st.set_page_config(layout = "wide", page_icon = 'logo.png', page_title='EDA')
 
 st.header("Exploratory Data Analysis Wizard")
 
-st.write('<p style="font-size:160%">You will be able to perform below action:</p>', unsafe_allow_html=True)
+st.write('<p style="font-size:160%">You will be able to perform below actions:</p>', unsafe_allow_html=True)
 
 st.write('<p style="font-size:100%">&nbsp 1. See the whole dataset</p>', unsafe_allow_html=True)
 st.write('<p style="font-size:100%">&nbsp 2. Get column names, data types info</p>', unsafe_allow_html=True)
