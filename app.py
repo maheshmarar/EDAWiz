@@ -6,7 +6,7 @@ import functions
 
 st.set_page_config(layout = "wide", page_icon = 'logo.png', page_title='EDA')
 
-st.header("ðŸŽ¨Exploratory Data Analysis Tool for Data Science Projects")
+st.header(Exploratory Data Analysis Wizard")
 
 st.write('<p style="font-size:160%">You will be able toâœ…:</p>', unsafe_allow_html=True)
 
