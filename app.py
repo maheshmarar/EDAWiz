@@ -3,6 +3,9 @@ import pandas as pd
 import plotly.express as px
 import base64
 import functions
+# Set up the page configuration first
+st.set_page_config(layout="wide", page_icon='logo.png', page_title='EDA')
+
 # Define a function to read and return the content of an SVG file
 def get_svg(file_path):
     with open(file_path, "r", encoding="utf-8") as file:
@@ -17,16 +20,8 @@ sidebar_html = f"""
     <div style="padding: 0px;">{mobilityx_svg}</div>
     <div style="padding: 0px;">{aix_svg}</div>
 </div>
-<style>
-    .custom-aix-svg {{
-        width: 50px;
-        height: 50px;
-        margin-top: -15px;
-    }}
-</style>
 """
 st.sidebar.markdown(sidebar_html, unsafe_allow_html=True)
-st.set_page_config(layout = "wide", page_icon = 'logo.png', page_title='EDA')
 
 st.header("Exploratory Data Analysis Wizard")
 
