@@ -27,7 +27,7 @@ sidebar_html = """
         margin-top: -15px; /* Move the Aix.SVG 3 units up */
     }}
     .stFileUploader button {{
-        background-color: yellow !important;
+        background-color: #fba700;
     }}
 </style>
 """.format(mobilityx_svg=mobilityx_svg, aix_svg=aix_svg)
@@ -37,14 +37,14 @@ st.sidebar.markdown(sidebar_html, unsafe_allow_html=True)
 st.markdown("""
 <style>
     .stFileUploader button {
-        background-color: yellow !important;
+        background-color: #fba700;
     }
 </style>
 """, unsafe_allow_html=True)
 
 # Yellow title
 st.markdown("""
-<h1 style='color: yellow; text-align: center;'>Exploratory Data Analysis Wizard</h1>
+<h1 style='color: #fba700; text-align: center;'>Exploratory Data Analysis Wizard</h1>
 """, unsafe_allow_html=True)
 
 st.write('<p style="font-size:160%">You will be able to perform below actions:</p>', unsafe_allow_html=True)
