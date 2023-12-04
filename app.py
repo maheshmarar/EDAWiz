@@ -18,8 +18,15 @@ aix_svg = get_svg("aix.svg")
 sidebar_html = f"""
 <div style="display: flex; flex-direction: row; justify-content: start; align-items: start;">
     <div style="padding: 0px;">{mobilityx_svg}</div>
-    <div style="padding: 0px;">{aix_svg}</div>
+    <div style="padding: 0px;" class="custom-aix-svg">{aix_svg}</div>
 </div>
+<style>
+    .custom-aix-svg svg {{
+        width: 50px; /* Adjust the width of Aix.SVG */
+        height: 50px; /* Adjust the height of Aix.SVG */
+        margin-top: -15px; /* Move the Aix.SVG 3 units up */
+    }}
+</style>
 """
 st.sidebar.markdown(sidebar_html, unsafe_allow_html=True)
 
