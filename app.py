@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import base64
 import functions
+
 # Set up the page configuration first
 st.set_page_config(layout="wide", page_icon='logo.png', page_title='EDA')
 
@@ -15,7 +15,7 @@ def get_svg(file_path):
 mobilityx_svg = get_svg("mobilityx.svg")
 aix_svg = get_svg("aix.svg")
 
-sidebar_html = f"""
+sidebar_html = """
 <div style="display: flex; flex-direction: row; justify-content: start; align-items: start;">
     <div style="padding: 0px;">{mobilityx_svg}</div>
     <div style="padding: 0px;" class="custom-aix-svg">{aix_svg}</div>
@@ -26,11 +26,26 @@ sidebar_html = f"""
         height: 50px; /* Adjust the height of Aix.SVG */
         margin-top: -15px; /* Move the Aix.SVG 3 units up */
     }}
+    .stFileUploader button {{
+        background-color: yellow !important;
+    }}
 </style>
-"""
+""".format(mobilityx_svg=mobilityx_svg, aix_svg=aix_svg)
 st.sidebar.markdown(sidebar_html, unsafe_allow_html=True)
 
-st.header("Exploratory Data Analysis Wizard")
+# Custom CSS for title and file uploader
+st.markdown("""
+<style>
+    .stFileUploader button {
+        background-color: yellow !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+# Yellow title
+st.markdown("""
+<h1 style='color: yellow; text-align: center;'>Exploratory Data Analysis Wizard</h1>
+""", unsafe_allow_html=True)
 
 st.write('<p style="font-size:160%">You will be able to perform below actions:</p>', unsafe_allow_html=True)
 
