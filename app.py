@@ -31,7 +31,7 @@ use_defo = st.checkbox('Use example Dataset')
 if use_defo:
     dataset = 'CarPrice_Assignment.csv'
 
-st.sidebar.header('Import Dataset to Use Available Features: ðŸ‘‰')
+st.sidebar.header('Import Dataset to Use Available Features')
 
 if dataset:
     if file_format == 'csv' or use_defo:
