@@ -1,9 +1,31 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-
+import base64
 import functions
+# Define a function to read and return the content of an SVG file
+def get_svg(file_path):
+    with open(file_path, "r", encoding="utf-8") as file:
+        return file.read()
 
+# Display SVG images in the sidebar
+mobilityx_svg = get_svg("mobilityx.svg")
+aix_svg = get_svg("aix.svg")
+
+sidebar_html = f"""
+<div style="display: flex; flex-direction: row; justify-content: start; align-items: start;">
+    <div style="padding: 0px;">{mobilityx_svg}</div>
+    <div style="padding: 0px;">{aix_svg}</div>
+</div>
+<style>
+    .custom-aix-svg {{
+        width: 50px;
+        height: 50px;
+        margin-top: -15px;
+    }}
+</style>
+"""
+st.sidebar.markdown(sidebar_html, unsafe_allow_html=True)
 st.set_page_config(layout = "wide", page_icon = 'logo.png', page_title='EDA')
 
 st.header("Exploratory Data Analysis Wizard")
